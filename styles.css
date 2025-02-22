@@ -39,6 +39,13 @@ img {
 }
 
 /* About Me Section - Flexbox Layout */
+.about-me {
+    padding-left: 20px; /* Add left padding */
+    max-width: 800px; /* Set maximum width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
 .about-me .content {
     display: flex;
     flex-direction: column;
