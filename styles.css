@@ -76,6 +76,11 @@ details {
 summary {
     font-weight: bold;
     cursor: pointer;
+    list-style: none;
+}
+
+summary h2 {
+    display: inline;
 }
 
 details[open] summary {
