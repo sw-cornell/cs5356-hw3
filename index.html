@@ -78,7 +78,7 @@
         </section>
 
 
-        <!-- New: Dog Pics -->
+        <!-- API: Dog Pics -->
         <section class="dogs">
             <h2>I was Born in the Year of Dog!</h2>
             <div id="dog-container">
@@ -87,9 +87,22 @@
             </div>
             <button id="fetch-dog">Get Another Dog</button>
         </section>
+
+
+        <!-- EC1: Interactive Mouse Move Section -->
+        <section class="interactive-mouse">
+            <h2>Interactive Mouse Move</h2>
+            <div id="mouse-follower"></div>
+        </section>
+
     </main>
 
     <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Siyan Wang. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to fetch and display random dog image -->
     <script>
         // Function to fetch random dog image from the API
         async function fetchRandomDog() {
@@ -114,6 +127,33 @@
 
         // Fetch a random dog image when the page loads
         fetchRandomDog();
+    </script>
+
+    <!-- JavaScript for Mouse Move Interaction -->
+    <script>
+        // Get the mouse follower element
+        const mouseFollower = document.getElementById('mouse-follower');
+
+        // Add mousemove event listener to the document
+        document.addEventListener('mousemove', (event) => {
+            // Get the mouse position
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Move the follower to the mouse position
+            mouseFollower.style.left = `${mouseX}px`;
+            mouseFollower.style.top = `${mouseY}px`;
+
+            // Change the size and color based on mouse position
+            const size = Math.abs(mouseX - window.innerWidth / 2) / 10 + 20; // Size changes based on X position
+            const red = (mouseX / window.innerWidth) * 255; // Red value based on X position
+            const blue = (mouseY / window.innerHeight) * 255; // Blue value based on Y position
+
+            // Update the follower's size and color
+            mouseFollower.style.width = `${size}px`;
+            mouseFollower.style.height = `${size}px`;
+            mouseFollower.style.backgroundColor = `rgb(${red}, 0, ${blue})`;
+        });
     </script>
 </body>
 </html>
