@@ -88,3 +88,9 @@ footer {
     padding: 10px 0;
     margin-top: 10px;
 }
+
+/* New Code: Add backdrop-filter to header */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Background blur effect */
+}
