@@ -99,6 +99,31 @@ details[open] summary {
     margin-bottom: 10px;
 }
 
+/* API Data Section */
+.api-data {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.api-data img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.api-data button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.api-data button:hover {
+    background-color: #005fa3;
+}
+
 /* Footer */
 footer {
     text-align: center;

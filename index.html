@@ -82,5 +82,36 @@
     <footer>
         <p>&copy; 2025 Siyan Wang. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript to fetch and display API data -->
+   <script>
+       // Function to fetch random user data from the API
+       async function fetchRandomUser() {
+           try {
+               const response = await fetch('https://randomuser.me/api/');
+               const data = await response.json();
+               const user = data.results[0]; // Get the first user from the results
+
+               // Update the HTML with the user data
+               const userDataDiv = document.getElementById('user-data');
+               userDataDiv.innerHTML = `
+                   <img src="${user.picture.large}" alt="My Online friends">
+                   <p><strong>Name:</strong> ${user.name.first} ${user.name.last}</p>
+                   <p><strong>Gender:</strong> ${user.gender}</p>
+                   <p><strong>Email:</strong> ${user.email}</p>
+                   <p><strong>Location:</strong> ${user.location.city}, ${user.location.country}</p>
+               `;
+           } catch (error) {
+               console.error('Error fetching user data:', error);
+               document.getElementById('user-data').innerHTML = '<p>Failed to load user data. Please try again later.</p>';
+           }
+       }
+
+       // Add event listener to the button
+       document.getElementById('fetch-user').addEventListener('click', fetchRandomUser);
+
+       // Fetch a random user when the page loads
+       fetchRandomUser();
+   </script>
 </body>
 </html>
