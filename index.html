@@ -77,15 +77,16 @@
             </p>
         </section>
 
-        <!-- API Data Section -->
-       <section class="api-data">
-           <h2>My Online Friends （Random User from API）</h2>
-           <div id="user-data">
-               <!-- User data will be dynamically inserted here -->
-               <p>Loading user data...</p>
-           </div>
-           <button id="fetch-user">My Online Friend</button>
-       </section>
+
+        <!-- New: Vadivelu GIF Section -->
+        <section class="vadivelu-gif">
+            <h2>Random Vadivelu GIF</h2>
+            <div id="gif-container">
+                <!-- GIF will be dynamically inserted here -->
+                <p>Loading Vadivelu GIF...</p>
+            </div>
+            <button id="fetch-gif">Get Random Vadivelu GIF</button>
+        </section>
 
     </main>
 
@@ -95,35 +96,31 @@
         <p>&copy; 2025 Siyan Wang. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript to fetch and display API data -->
-   <script>
-       // Function to fetch random user data from the API
-       async function fetchRandomUser() {
-           try {
-               const response = await fetch('https://randomuser.me/api/');
-               const data = await response.json();
-               const user = data.results[0]; // Get the first user from the results
+    <script>
+        // Function to fetch random Vadivelu GIF from the API
+        async function fetchVadiveluGif() {
+            try {
+                const response = await fetch('https://vadivelu.anoram.com/random');
+                const data = await response.json();
+                const gifUrl = data.image; // Get the GIF URL from the response
 
-               // Update the HTML with the user data
-               const userDataDiv = document.getElementById('user-data');
-               userDataDiv.innerHTML = `
-                   <img src="${user.picture.large}" alt="My Online friends">
-                   <p><strong>Name:</strong> ${user.name.first} ${user.name.last}</p>
-                   <p><strong>Gender:</strong> ${user.gender}</p>
-                   <p><strong>Email:</strong> ${user.email}</p>
-                   <p><strong>Location:</strong> ${user.location.city}, ${user.location.country}</p>
-               `;
-           } catch (error) {
-               console.error('Error fetching user data:', error);
-               document.getElementById('user-data').innerHTML = '<p>Failed to load user data. Please try again later.</p>';
-           }
-       }
+                // Update the HTML with the GIF
+                const gifContainer = document.getElementById('gif-container');
+                gifContainer.innerHTML = `
+                    <img src="${gifUrl}" alt="Random Vadivelu GIF" style="max-width: 100%; height: auto;">
+                `;
+            } catch (error) {
+                console.error('Error fetching Vadivelu GIF:', error);
+                document.getElementById('gif-container').innerHTML = '<p>Failed to load Vadivelu GIF. Please try again later.</p>';
+            }
+        }
 
-       // Add event listener to the button
-       document.getElementById('fetch-user').addEventListener('click', fetchRandomUser);
+        // Add event listener to the button
+        document.getElementById('fetch-gif').addEventListener('click', fetchVadiveluGif);
 
-       // Fetch a random user when the page loads
-       fetchRandomUser();
+        // Fetch a random Vadivelu GIF when the page loads
+        fetchVadiveluGif();
+
    </script>
 </body>
 </html>

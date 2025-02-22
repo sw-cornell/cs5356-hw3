@@ -99,18 +99,19 @@ details[open] summary {
     margin-bottom: 10px;
 }
 
-/* API Data Section */
-.api-data {
+/* API: Vadivelu GIF Section */
+.vadivelu-gif {
     margin-top: 20px;
     text-align: center;
 }
 
-.api-data img {
-    border-radius: 50%;
-    margin-bottom: 10px;
+.vadivelu-gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.api-data button {
+.vadivelu-gif button {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #0077cc;
@@ -120,7 +121,7 @@ details[open] summary {
     cursor: pointer;
 }
 
-.api-data button:hover {
+.vadivelu-gif button:hover {
     background-color: #005fa3;
 }
 
