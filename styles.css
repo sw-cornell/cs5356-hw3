@@ -28,7 +28,7 @@ img {
 }
 
 .about-me figure {
-    text-align: center; /* Center the image and caption */
+    text-align: center;
 }
 
 .about-me figcaption {
@@ -43,7 +43,7 @@ img {
         align-items: flex-start;
     }
     .about-me img {
-        width: 400px; /* Adjust image width for larger screens */
+        width: 400px;
         flex-shrink: 0;
     }
 }
@@ -61,6 +61,23 @@ img {
     background-color: #f0f0f0;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Additional Info Section - Details and Summary */
+details {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
 }
 
 /* Footer */
