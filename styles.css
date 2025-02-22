@@ -4,15 +4,10 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
-header {
+header, main, footer {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
-    backdrop-filter: blur(10px); /* Blurred background */
-    text-align: center;
 }
 
 h1, h2 {
@@ -53,28 +48,7 @@ img {
     }
 }
 
-/* My Favorites Section - Details and Summary */
-.favorites details {
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.favorites summary {
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
-}
-
-.favorites summary h2 {
-    display: inline;
-}
-
-.favorites details[open] summary {
-    margin-bottom: 10px;
-}
-
+/* My Favorites Section - Grid Layout */
 .favorites ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -89,15 +63,28 @@ img {
     border-radius: 5px;
 }
 
+/* Additional Info Section - Details and Summary */
+details {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
     text-align: center;
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    margin-top: 20px;
-    max-width: 600px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 10px;
 }
