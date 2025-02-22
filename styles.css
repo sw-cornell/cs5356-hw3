@@ -100,18 +100,18 @@ details[open] summary {
 }
 
 /* API - Vadivelu GIF Section */
-.vadivelu-gif {
+.dogs {
     margin-top: 20px;
     text-align: center;
 }
 
-.vadivelu-gif img {
+.dogs img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.vadivelu-gif button {
+.dogs button {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #0077cc;
@@ -121,7 +121,7 @@ details[open] summary {
     cursor: pointer;
 }
 
-.vadivelu-gif button:hover {
+.dogs button:hover {
     background-color: #005fa3;
 }
 
