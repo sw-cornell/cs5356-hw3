@@ -100,7 +100,7 @@
         // Function to fetch random Vadivelu GIF from the API
         async function fetchVadiveluGif() {
             try {
-                const response = await fetch('https://vadivelu.anoram.com/gif/200');
+                const response = await fetch('https://vadivelu.anoram.com/random');
                 const data = await response.json();
                 const gifUrl = data.image; // Get the GIF URL from the response
 
